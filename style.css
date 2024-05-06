@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    background-color: white;
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+/*------------------------- Parte del header -------------------------------  */
+.logo {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+p a{
+  color: rgb(85, 85, 85);
+}
+
+.abrir-menu,
+.cerrar-menu {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: none;
+}
+
+
+header {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.list-nav {
+    display: flex;
+    margin-top: 9px;
+    gap: 2rem;
+}
+
+.link-nav {
+    font-size: 20px;
+    color: #323232;
+
+}
+.flecha{
+    font-size: 30px;
+}
+
+/* -------------------------------- querry nav -------------------------- */
+
+@media screen and (max-width: 800px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+
+
+    }
+
+    .abrir-menu {
+        color: whitesmoke;
+        background-color: #323232;
+        border: 0;
+
+    }
+
+    .cerrar-menu {
+        color: whitesmoke;
+        border: 0;
+        font-size: 30px;
+        background-color: #323232;
+        ;
+
+    }
+
+    .nav {
+
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        position: absolute;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        align-items: center;
+        padding: 3rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .9);
+
+
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list-nav {
+        margin: 80px auto;
+        flex-direction: column;
+        align-items: end;
+        gap: 5rem;
+    }
+
+    .link-nav {
+        color: white;
+    }
+
+}
+
+/* ------------------------ Parte de principal   ---------------------------- */
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.intro {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 120px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro h1 {
+    font-size: 30px;
+    line-height: none;
+}
+
+.intro h2 {
+    font-size: 22px;
+}
+
+a {
+    color: black;
+    margin-right: 12px;
+    font-weight: 900;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.principal{
+    height: 460px;
+}
+.avatar,img {
+    border-radius: 8px;
+    height: 350px;
+}
+
+/* ------------------ Parte de nosotros ----------------------*/
+.intro-project{
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 70px;
+}
+.text-project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+strong{
+    color: rgb(184, 77, 77);
+}
+.text-project h2{
+    font-size: 25px;
+    color: #323232;
+    margin-bottom: 20px;
+    line-height: 2.6rem;
+    
+}
+.menu{
+    text-decoration:overline;
+}
+.carta-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.carta-menu,.imagen-menu{
+    border-radius: 3px;
+    
+}
+
+/* -----------------------  query de intro y carta de menu-------------- */
+@media(width < 1000px){
+    .intro{
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+        gap: 2rem;
+    }
+    .intro-project{
+        grid-template-columns: 100%;
+        text-align: center;
+        gap: 2rem;
+       }
+}
+
+/* ----------------------- PARTE DE MENU -------------------- */
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.productos{
+    border: 1px solid #e6e6e6;
+    margin: 10px;
+    text-align: center;
+    width:270px;
+    border-radius: 8px;
+}
+.productos:hover{
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px lightslategray;
+    transition: .7s;
+
+}
+.productos img{
+    width: 250px;
+    height: 250px;
+    border-radius: 2px;
+}
+.productos h2{
+    font-size: 20px;
+    color: #323232;
+    
+}
+.price{
+    font-size: 17px;
+    color:rgb(170, 16, 47);
+    font-weight: 700;
+}
+.productos h3{
+    font-size: 17px;
+    color: #323232;
+}
+.productos button{
+    background-color: #323232;
+    color: whitesmoke;
+    border-radius: 3px;
+    padding: 5px;
+    border: 0;
+    margin: 5px;
+    cursor: pointer;
+}
+@media  screen and (max-width:768) {
+    .productos{
+        width: 100%;
+    }
+    
+}
+
+
+/*--------------- PARTE DEL CARRO ----------*/
+.carro{
+    border: 1px solid ;
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    box-shadow: 0 0 10px rgb(0,0,0, 0.1);
+
+}
+.carro h2{
+    font-size: 22px;
+    color: #323232;
+}
+.carro span{
+    color: #323232;
+    font-size: 17px;
+    font-weight: 600;
+}
+.vaciar{
+    background-color: brown;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.enviar{
+    background-color: lightgreen;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: #323232;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:768px){
+    .carro{
+        width: 200px;
+        right: 10px;
+    }
+}
+@media screen and (max-width:576px){
+    .carro{
+        width: 180px;
+        right: 5px;
+    }
+}
+footer{
+    margin-top: 25px;
+    width: 250px;
+    margin: 0 auto;
+}
+footer a{
+    color:#323232;
+}
